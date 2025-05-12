@@ -27,3 +27,5 @@ The second method, transcribe_audio_wav2vec(), implements a deep learning-based 
 This method begins by loading the model and processor using the Hugging Face transformers library. The processor prepares the audio data for the model by tokenizing the waveform into a format suitable for the neural network. Audio is loaded from the given file path using librosa with a fixed sample rate of 16 kHz, which is the standard input format for Wav2Vec2.
 After preprocessing, the model performs inference on the input audio tensor. The output logits (raw prediction scores) are passed through a torch.argmax operation to obtain the most likely token IDs. Finally, these tokens are decoded back into human-readable text using the processor’s batch_decode() method.
 This deep learning approach offers more control and customization, works offline, and can be fine-tuned for specific domains or accents. However, it is computationally more intensive and requires the necessary machine learning infrastructure.
+
+![Image](https://github.com/user-attachments/assets/c8097d59-13d0-40a6-b400-03afa7c9dcf6)
